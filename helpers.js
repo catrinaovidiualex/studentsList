@@ -37,3 +37,26 @@ return div1;
 
 
 }
+
+//arr= luam parametru un array
+function attachCards(arr){
+
+let container=document.querySelector(".container");
+
+
+
+for(let i=0; i<arr.length;i++){
+  
+
+    let card=createStudentCard(arr[i]);
+
+
+    container.appendChild(card);
+}
+
+
+
+}
+//function attach cards
+
+
