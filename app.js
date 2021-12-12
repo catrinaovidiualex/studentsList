@@ -1,4 +1,4 @@
 //createStudentCard(data[0]);
 
-attachCards(data);
+//attachCards(data);
 

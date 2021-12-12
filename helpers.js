@@ -39,6 +39,7 @@ return div1;
 }
 
 //arr= luam parametru un array
+//function attach cards
 function attachCards(arr){
 
 let container=document.querySelector(".container");
@@ -57,6 +58,40 @@ for(let i=0; i<arr.length;i++){
 
 
 }
-//function attach cards
 
+
+
+//primim un vector ,numarul paginii  ,numarul de carduri
+
+
+
+    function  pagination(arr,pag, nrCard){
+   
+    let nou=[];
+    for(let i=(pag-1)*nrCard;i<pag*nrCard;i++){
+        nou.push(arr[i]);
+    }
+
+    return nou;
+    
+
+    }
+
+
+
+    function setCards(arr ,pagina){
+        
+
+         
+        if(window.innerWidth<720){
+
+             
+             let a=pagination(arr,pagina,4);
+
+             attachCards(a);
+
+        }
+
+
+    }
 
