@@ -9,8 +9,8 @@ div1.classList.add("student");
 let img1=document.createElement('img');
 img1.classList.add("pics");
 //img1.style.src=obj.picture.medium;
-img1.textContent=obj.picture.medium;
 
+img1.src=obj.picture.medium;
 
 
 let h3=document.createElement('h3');
