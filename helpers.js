@@ -45,6 +45,7 @@ function attachCards(arr){
 let container=document.querySelector(".container");
 
 
+container.innerHTML="";
 
 for(let i=0; i<arr.length;i++){
   
@@ -79,19 +80,46 @@ for(let i=0; i<arr.length;i++){
 
 
 
-    function setCards(arr ,pagina){
+    function setCards(arr,pagina){
         
 
          
-        if(window.innerWidth<720){
+        if(window.innerWidth<320){
 
              
              let a=pagination(arr,pagina,4);
 
              attachCards(a);
 
+        }else if(window.innerWidth>=320 && window.innerWidth<720){
+
+            let a=pagination(arr,pagina,6);
+
+             attachCards(a);
+        }
+
+        else if(window.innerWidth>=720 && window.innerWidth<920){
+
+            let a=pagination(arr,pagina,9);
+            attachCards(a);
+        }
+        else if(window.innerWidth>=920){
+            let a=pagination(arr,pagina,9);
+            attachCards(a);
         }
 
 
     }
+
+        
+    //functie care genereaza butoanele pentru pagini
+    
+    function generatePageButtons(arr,numberPage){
+     let pageNr=document.querySelector(".pageNumber");
+
+     
+         
+    }
+        
+
 

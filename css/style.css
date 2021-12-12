@@ -66,13 +66,14 @@ div.container{
     margin-top:10px;
 
     margin-right:10px;
+    
 }
 
 .email{
     display:flex;
     flex-wrap: wrap;
-    align-items:center;
-    justify-content: center;
+    align-items:left;
+    justify-content:left;
     width:100%; 
     margin:0;
 }
@@ -83,6 +84,28 @@ div.container{
     height:80%;
     margin:0;
 }
+
+.pageNumber{
+    border:1px solid rgb(27, 27, 27);
+    background-color: rgb(170, 169, 169);
+   
+    width:20px;
+    height:25px;
+    border-radius: 5px;
+}
+
+p.pageNumber{
+    margin:auto;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+}
+
+footer{
+    margin-top:10px;
+}
+
+
 
 @media (min-width:720px){
 
