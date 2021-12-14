@@ -115,9 +115,15 @@ for(let i=0; i<arr.length;i++){
     //functie care genereaza butoanele in functie de cate
     
     function generatePageButtons(numar){
-     let pagesNumbers=document.querySelector(".pageNumber");
+     
      let footerPage=document.querySelector(".footerPg");
+     for (let i=0; i<numar;i++){
+        let pagesNumbers=document.createElement('p');
+        
+        footerPage.appendChild(pagesNumbers);
+        pagesNumbers.classList.add("pageNumber");
 
+     }
 
      
          
