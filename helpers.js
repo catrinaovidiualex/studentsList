@@ -112,10 +112,12 @@ for(let i=0; i<arr.length;i++){
     }
 
         
-    //functie care genereaza butoanele pentru pagini
+    //functie care genereaza butoanele in functie de cate
     
-    function generatePageButtons(arr,numberPage){
-     let pageNr=document.querySelector(".pageNumber");
+    function generatePageButtons(numar){
+     let pagesNumbers=document.querySelector(".pageNumber");
+     let footerPage=document.querySelector(".footerPg");
+
 
      
          
