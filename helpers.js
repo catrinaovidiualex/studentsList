@@ -117,13 +117,16 @@ for(let i=0; i<arr.length;i++){
     function generatePageButtons(numar){
      
      let footerPage=document.querySelector(".footerPg");
+     let pagesNumbers=document.createElement('p');
      for (let i=0; i<numar;i++){
-        let pagesNumbers=document.createElement('p');
         
-        footerPage.appendChild(pagesNumbers);
+        //footerPage.appendChild('<p class="pageNumber">'+(i+1)+'</p>');
+        footerPage.appendChild(p);
         pagesNumbers.classList.add("pageNumber");
+      
 
      }
+  
 
      
          
