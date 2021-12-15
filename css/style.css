@@ -28,6 +28,27 @@ header{
 header p{
     font-weight: bold;
     align-items: left;  
+    text-align:center;
+}
+
+.searchbtn{
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: rgb(250, 250, 250);
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer; 
+}
+
+div.searchcontainer{
+    display:flex;
+    align-content: flex-end;
+    margin-left:650px;
+    border: 1px solid rgb(141, 200, 255);
+    max-height:50px;
 }
 
 main{

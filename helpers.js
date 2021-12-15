@@ -154,6 +154,23 @@ function generatePageButtons(numar){
        
     }
 
+
+    // event pentru filtrare atunci cand se da click pe poza
+
+ let filterByName=(e)=>{
+
+    let inputSearch=document.querySelector(".filterbyName")
+     obj=e.target;
+     for (let i=0; i<data.length;i++){
+      if(data.nume[i]===inputSearch) {
+          setCards(data,1);
+      }
+      
+      return data.nume[i];
+    
+    }
+
+ }
    
 
         
