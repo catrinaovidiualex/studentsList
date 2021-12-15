@@ -12,6 +12,7 @@ body{
     flex-direction: column;
     padding: 5px;
     background-color: rgb(238, 236, 236);
+    height:120vh;
 }
 
 header{
@@ -86,25 +87,36 @@ div.container{
 }
 
 .pageNumber{
-    border:1px solid rgb(27, 27, 27);
+    border:2px solid rgb(117, 117, 117);
     background-color: rgb(170, 169, 169);
-   
-    width:20px;
-    height:25px;
-    border-radius: 5px;
+    align-items: center;
+    text-align:center;
+    width:30px;
+    height:35px;
+    border-radius: 10px;
+    
 }
 
 p.pageNumber{
     margin:auto;
     font-weight: bold;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
+    margin-right:5px;
 }
 
 footer{
+    display:flex;
+
     margin-top:10px;
+    max-width:350px;
+    max-height: 150px;
+
 }
 
+footer p{
+    display:inline-block;
+}
 
 
 @media (min-width:720px){

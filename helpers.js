@@ -66,7 +66,7 @@ for(let i=0; i<arr.length;i++){
 
 
 
-    function  pagination(arr,pag, nrCard){
+function  pagination(arr,pag, nrCard){
    
     let nou=[];
     for(let i=(pag-1)*nrCard;i<pag*nrCard;i++){
@@ -80,7 +80,7 @@ for(let i=0; i<arr.length;i++){
 
 
 
-    function setCards(arr,pagina){
+function setCards(arr,pagina){
         
 
          
@@ -112,25 +112,42 @@ for(let i=0; i<arr.length;i++){
     }
 
         
-    //functie care genereaza butoanele in functie de cate
-    
-    function generatePageButtons(numar){
+    //functie care genereaza butoanele in functie de cate sunt
+
+function generatePageButtons(numar){
      
      let footerPage=document.querySelector(".footerPg");
-     let pagesNumbers=document.createElement('p');
+  
      for (let i=0; i<numar;i++){
         
-        //footerPage.appendChild('<p class="pageNumber">'+(i+1)+'</p>');
-        footerPage.appendChild(p);
+        let pagesNumbers=document.createElement('p');
+        footerPage.appendChild(pagesNumbers);
         pagesNumbers.classList.add("pageNumber");
-      
+        pagesNumbers.textContent=`${i+1}`;
 
      }
-  
-
      
-         
     }
+
+
+    //handle event for clik on page
+
+//eventu o sa fie pe footer
+    let handleClick=(e)=>{
+        obj=e.target;
+        
+        if(obj.tagName=='P'){
+
+            let number=+obj.textContent;
+
+            setCards(data,number);
+
+        }
+       
+    }
+
+   
+
         
 
 
