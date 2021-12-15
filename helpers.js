@@ -72,7 +72,6 @@ function  pagination(arr,pag, nrCard){
     for(let i=(pag-1)*nrCard;i<pag*nrCard;i++){
         nou.push(arr[i]);
     }
-
     return nou;
     
 
@@ -88,24 +87,31 @@ function setCards(arr,pagina){
 
              
              let a=pagination(arr,pagina,4);
-
              attachCards(a);
+
+             generatePageButtons((arr.length+1)/4);
+
+
 
         }else if(window.innerWidth>=320 && window.innerWidth<720){
 
             let a=pagination(arr,pagina,6);
 
              attachCards(a);
+
+             generatePageButtons((arr.length+1)/6);
         }
 
         else if(window.innerWidth>=720 && window.innerWidth<920){
 
             let a=pagination(arr,pagina,9);
             attachCards(a);
+            generatePageButtons((arr.length+1)/9);
         }
         else if(window.innerWidth>=920){
             let a=pagination(arr,pagina,9);
             attachCards(a);
+            generatePageButtons((arr.length+1)/9);
         }
 
 
@@ -117,6 +123,8 @@ function setCards(arr,pagina){
 function generatePageButtons(numar){
      
      let footerPage=document.querySelector(".footerPg");
+
+     footerPage.textContent="";
   
      for (let i=0; i<numar;i++){
         

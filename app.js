@@ -18,5 +18,6 @@ window.addEventListener('resize',()=>{
 
 })
 
-generatePageButtons(6);
-generateItemsPerPage(data);
+
+
+
