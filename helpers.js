@@ -160,10 +160,17 @@ function generatePageButtons(numar){
  let filterByName=(e)=>{
 
     let inputSearch=document.querySelector(".filterbyName")
-     obj=e.target;
+    let filter=inputSearch.value.toUpperCase();
+    let divSt=document.querySelector(".student");
+    let h3name=document.querySelector(".stname");
      for (let i=0; i<data.length;i++){
-      if(data.nume[i]===inputSearch) {
+         a=data.nume[i].getElementByTagName("a")[0];
+         txtValue=a.textContent ||a.innerText;
+      if(txtValue.toUpperCase().indexOf(filter)>-1) {
+          data.nume[i].style.display="";
           setCards(data,1);
+      }else{
+        data.nume[i].style.display="none";
       }
       
       return data.nume[i];
