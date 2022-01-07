@@ -26,7 +26,9 @@ searchName.addEventListener('input',(e)=>{
  
     let val=searchName.value;
 
+
     let arr=checkName(val,data);
+
 
     setCards(arr,1);
 

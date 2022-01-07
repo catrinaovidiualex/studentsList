@@ -156,34 +156,7 @@ function generatePageButtons(numar){
        
     }
 
-
-    // event pentru filtrare atunci cand se da click pe poza
-
- let filterByName=(e)=>{
-
-    obj=e.target;
-
-    let inputSearch=obj.querySelector(".filterbyName")
-    let filter=inputSearch.value.toUpperCase();
-    let divSt=document.querySelector(".student");
-    let h3name=document.querySelector(".stname");
-     for (let i=0; i<data.length;i++){
-         a=data.nume[i].getElementByTagName("a")[0];
-         txtValue=a.textContent ||a.innerText;
-      if(txtValue.toUpperCase().indexOf(filter)>-1) {
-          data.nume[i].style.display="";
-          setCards(data,1);
-      }else{
-        data.nume[i].style.display="none";
-      }
-      
-      return data.nume[i];
-    
-    }
-
- }
-
-
+  
  //functie ce primeste ca parametru un string si un vector de obj
  
  function checkName(nameStud, stud){
