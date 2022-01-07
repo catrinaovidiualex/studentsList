@@ -135,6 +135,8 @@ function generatePageButtons(numar){
 
      }
      
+
+
     }
 
 
@@ -159,7 +161,9 @@ function generatePageButtons(numar){
 
  let filterByName=(e)=>{
 
-    let inputSearch=document.querySelector(".filterbyName")
+    obj=e.target;
+
+    let inputSearch=obj.querySelector(".filterbyName")
     let filter=inputSearch.value.toUpperCase();
     let divSt=document.querySelector(".student");
     let h3name=document.querySelector(".stname");
@@ -178,7 +182,26 @@ function generatePageButtons(numar){
     }
 
  }
-   
+
+
+ //functie ce primeste ca parametru un string si un vector de obj
+ 
+ function checkName(nameStud, stud){
+
+     let arr=[];
+
+
+    for(let i=0;i<stud.length;i++) {
+        if(stud[i].name.first.includes(nameStud) || stud[i].name.last.includes(nameStud)){
+           
+            arr.push(stud[i]);
+        }
+    }
+
+
+    return arr;
+
+ }
 
         
 

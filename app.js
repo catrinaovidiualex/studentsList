@@ -20,4 +20,19 @@ window.addEventListener('resize',()=>{
 
 
 
+let searchName=document.querySelector(".filterbyName");
+searchName.addEventListener('input',(e)=>{
+  
+ 
+    let val=searchName.value;
+
+    let arr=checkName(val,data);
+
+    setCards(arr,1);
+
+});
+
+
+
+
 
