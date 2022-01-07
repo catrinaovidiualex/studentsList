@@ -124,6 +124,7 @@ p.pageNumber{
     text-align: center;
     font-size: 20px;
     margin-right:5px;
+    cursor: pointer;
 }
 
 footer{
