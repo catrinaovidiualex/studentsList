@@ -184,28 +184,28 @@ footer p{
     }
 
     body{
-        opacity: 70%;
+        /*opacity: 70%;*/
         position:relative;
     }
 
     .modal{
         position:absolute;
-        display:flex;
-        text-align: center;
-        flex-wrap: wrap;
-        align-items:center;
-        justify-content: center;
-        /*background-color: rgb(182, 174, 174);*/
-    
+     
+        background-color:rgba(128,128,128,255);
+
+        opacity: 0.7;
         
+            
         height: 100%;
         width: 100%;
       
     }
 
-    div.modalStudent{
-        background-color: white;
-        
+    .modalStudent{
+
+    
+
+        position: absolute;
         display:grid;
         grid-template-columns: 1fr;
         align-items:center;
@@ -215,6 +215,10 @@ footer p{
         max-width:750px;  
         margin-right:5px;
         border-radius: 15px;
+        background-color:white;
+        opacity: 1;
+
+
        
         
 
@@ -232,16 +236,19 @@ footer p{
 
     .modalEmail{
         font-size: 18px;
+        margin:auto;
     }
     .modalStName{
         font-size: 22px;
         font-weight: bold;
+        margin:auto;
 
     }
     
     .modalRegisterDate{
         font-size:15px;
         font-style: italic;
+        margin:auto;
         }
 
 
