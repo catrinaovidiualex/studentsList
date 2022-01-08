@@ -209,7 +209,7 @@ function generatePageButtons(numar){
 
  }
 
- function attachModalCards(arr){
+ function attachModalCards(arrSt){
 
     
     let modalSection=document.querySelector(".modal");
@@ -218,10 +218,10 @@ function generatePageButtons(numar){
     
     body.innerHTML="";
     
-    for(let i=0; i<arr.length;i++){
+    for(let i=0; i<arrSt.length;i++){
       
     
-        let modalSudentCard=createModalCards(arr[i]);
+        let modalSudentCard=createModalCards(arrSt[i]);
     
     
         body.appendChild(modalSudentCard);
@@ -232,3 +232,67 @@ function generatePageButtons(numar){
     
     
     }
+
+
+
+//fucntie ce primeste ca parametru un obiect  si returneaza card din modal
+
+function  setModal(obj){
+
+
+
+    let body=document.querySelector('body');
+
+    let first=body.firstElementChild;
+
+    let section =document.createElement("section");
+
+    section.classList.add("modal");
+
+
+    let card=document.createElement("div");
+    card.classList.add("modalStudent");
+
+    card.innerHTML=`
+    
+        <i class="far fa-window-close"></i>
+        <img src=${obj.picture.medium} alt="" class="modalPics">
+        <div class="butoane">
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-right"></i>
+        </div> 
+        <h3 class="modalStName">${obj.name.first} ${obj.name.last}</h3>
+        <p class="modalEmail">${obj.email}</p>
+        <p class="modalRegisterDate">Joined:${obj.registered.date}</p>
+
+    `
+
+    body.insertBefore(card,first);
+
+    body.insertBefore(section,card);
+
+}
+
+
+
+function removeModal(){
+    
+    let body=document.querySelector('body');
+    let card=document.querySelector('modalStudent');
+    let section=document.querySelector('modal');
+
+    let first= body.firstElementChild;
+  
+
+    body.removeChild(first);
+
+    let second=body.firstElementChild;
+
+    body.removeChild(second);
+
+
+
+   
+}
+
+

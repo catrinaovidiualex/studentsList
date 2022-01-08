@@ -35,6 +35,51 @@ searchName.addEventListener('input',(e)=>{
 });
 
 
+let  container=document.querySelector(".container");
+
+
+
+
+
+container.addEventListener("click",(e)=>{
+
+
+
+    let obj=e.target;
+
+
+
+    console.log(obj.parentNode);
+
+
+     if(obj.classList.contains("pics")){
+
+
+         let card=obj.parentNode;
+
+
+         let mail=card.querySelector(".email");
+
+
+         console.log(mail.textContent);
+
+
+     }
+
+
+
+
+
+})
+/*let studentCard=document.querySelector(".student");
+
+studentCard.addEventListener("click",()=>{
+   let arr=attachModalCards(data);
+   setCards(arr,1);
+
+})*/
+
+
 
 
 
