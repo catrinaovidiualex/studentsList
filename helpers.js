@@ -176,6 +176,59 @@ function generatePageButtons(numar){
 
  }
 
-        
+ function createModalCards(obj){
+     let modalSection=document.createElement('section');
+     modalSection.classList.add("modal");
 
+     let modalCard=document.createElement('div');
+     modalCard.classList.add("modalStudent");
 
+     let modalPictures=document.createElement('img');
+     modalPictures.classList.add("modalPics");
+     modalPictures.src=obj.picture.thumbnail;
+
+     let modalStudentName=document.createElement('h3');
+     modalStudentName.classList.add("modalStName");
+     modalStudentName.textContent=obj.name.first+""+obj.name.last;
+
+     let modalStudentEmail=document.createElement('p');
+     modalStudentEmail.classList.add("modalEmail");
+     modalStudentEmail.textContent=obj.email;
+
+     let modalStudentRegDate=document.createElement('p');
+     modalStudentRegDate.classList.add("modalRegisterDate");
+     modalStudentRegDate.textContent="Joined "+obj.registered.date;
+
+     
+     modalCard.appendChild(modalPictures);
+     modalCard.appendChild(modalStudentName);
+     modalCard.appendChild(modalStudentEmail);
+     modalCard.appendChild(modalStudentRegDate);
+
+     return modalCard;
+
+ }
+
+ function attachModalCards(arr){
+
+    
+    let modalSection=document.querySelector(".modal");
+    let modalDiv=document.querySelector(".modalStudent");
+    
+    
+    body.innerHTML="";
+    
+    for(let i=0; i<arr.length;i++){
+      
+    
+        let modalSudentCard=createModalCards(arr[i]);
+    
+    
+        body.appendChild(modalSudentCard);
+        body.appendChild(modalSection);
+
+    }
+    
+    
+    
+    }
