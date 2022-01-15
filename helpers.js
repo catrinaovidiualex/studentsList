@@ -258,8 +258,8 @@ function  setModal(obj){
         <i class="far fa-window-close close"></i>
         <img src=${obj.picture.medium} alt="" class="modalPics">
         <div class="butoane">
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-right"></i>
+            <i class="fas fa-arrow-left btnLeft"></i>
+            <i class="fas fa-arrow-right btnRight"></i>
         </div> 
         <h3 class="modalStName">${obj.name.first} ${obj.name.last}</h3>
         <p class="modalEmail">${obj.email}</p>
@@ -270,6 +270,37 @@ function  setModal(obj){
     body.insertBefore(card,first);
 
     body.insertBefore(section,card);
+
+    //pentru a inchide fereastra dupa ce s-a dat click pe poza
+    let btnClose=document.querySelector(".close");
+
+
+
+    btnClose.addEventListener("click",()=>{
+    
+        removeModal();
+        
+    });
+
+    //pentru a trece la urmatoare poza daca se apasa pe sagetile stanga/dreapta
+    let btnRight=document.querySelector(".btnRight");
+    let btnLeft=document.querySelector(".btnLeft");
+    btnRight.addEventListener("click",(e)=>{
+        let obj=e.target;
+        let objR=changeModalCard(obj);
+        moveToRight(objR.email);
+
+
+    });
+    
+    btnLeft.addEventListener("click",(e)=>{
+        let obj=e.target;
+        let objL=changeModalCard(obj);
+        moveToLeft(objL.email);
+    });
+    
+
+
 
 }
 
@@ -307,7 +338,57 @@ function returnStud(emailSt){
     return null;
 }
 
-function closeModalWindows(obj){
+// functie petru a trece la urmatorul card spre stanga (sageata stanga)
+
+function moveToLeft(emailSt){
+    let card=document.querySelector(".container");
+    for(let i=0;i<data.length;i++){
+        if(data[i].email==emailSt){
+            return data[i-1];
+        }
+    }
+    return null;
+
+}
+
+
+// functie petru a trece la urmatorul card spre dreapata (sageata dreapta)
+
+function moveToRight(emailSt){
+
+    let card=document.querySelector(".container");
+    for(let i=0;i<data.length;i++){
+        if(data[i].email==emailSt){
+            return data[i+1];
+        }
+    }
+    return null;
+
+}
+
+function changeModalCard(obj){
+
+    /*let modalSection=document.querySelector(".modal");*/
+    let modalDiv=document.querySelector(".modalStudent");
     
+    
+   
+    modalDiv.innerHTML=`
+
+    <i class="far fa-window-close close"></i>
+    <img src=${obj.picture.medium} alt="" class="modalPics">
+    <div class="butoane">
+        <i class="fas fa-arrow-left btnLeft"></i>
+        <i class="fas fa-arrow-right btnRight"></i>
+    </div> 
+    <h3 class="modalStName">${obj.name.first} ${obj.name.last}</h3>
+    <p class="modalEmail">${obj.email}</p>
+    <p class="modalRegisterDate">Joined:${obj.registered.date}</p>
+    
+    `
+
+    
+
+
 }
 

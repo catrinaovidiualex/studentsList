@@ -88,12 +88,7 @@ studentCard.addEventListener("click",()=>{
 
 
 
-let btnClose=document.querySelector(".close");
-btnClose.addEventListener("click",()=>{
-   
-    removeModal();
-    
-});
+
 
 
 
