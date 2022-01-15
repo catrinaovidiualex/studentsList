@@ -286,17 +286,22 @@ function  setModal(obj){
     let btnRight=document.querySelector(".btnRight");
     let btnLeft=document.querySelector(".btnLeft");
     btnRight.addEventListener("click",(e)=>{
-        let obj=e.target;
-        let objR=changeModalCard(obj);
-        moveToRight(objR.email);
+        let obj=e.target
+        let next=obj.nextElementSibling;
+        /*let objR=changeModalCard(obj);
+        moveToRight(objR.email);*/
+        changeModalCard(next);
 
 
     });
     
     btnLeft.addEventListener("click",(e)=>{
-        let obj=e.target;
-        let objL=changeModalCard(obj);
-        moveToLeft(objL.email);
+        let obj=e.target
+        let prev=obj.previousElementSibling;
+        /*let objR=changeModalCard(obj);
+        moveToRight(objR.email);*/
+        changeModalCard(prev);
+
     });
     
 
