@@ -140,9 +140,9 @@ function generatePageButtons(numar){
     }
 
 
-    //handle event for clik on page
+    //handle event for click on page
 
-//eventu o sa fie pe footer
+    //eventu o sa fie pe footer
     let handleClick=(e)=>{
         obj=e.target;
         
@@ -255,7 +255,7 @@ function  setModal(obj){
 
     card.innerHTML=`
     
-        <i class="far fa-window-close"></i>
+        <i class="far fa-window-close close"></i>
         <img src=${obj.picture.medium} alt="" class="modalPics">
         <div class="butoane">
             <i class="fas fa-arrow-left"></i>
@@ -295,4 +295,19 @@ function removeModal(){
    
 }
 
+
+function returnStud(emailSt){
+   
+    for(let i=0;i<data.length;i++){
+        if(data[i].email==emailSt){
+            return data[i];
+        }
+    }
+
+    return null;
+}
+
+function closeModalWindows(obj){
+    
+}
 

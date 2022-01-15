@@ -64,11 +64,9 @@ container.addEventListener("click",(e)=>{
          console.log(mail.textContent);
 
 
+         setModal(returnStud(mail.textContent));
+
      }
-
-
-
-
 
 })
 /*let studentCard=document.querySelector(".student");
@@ -79,7 +77,23 @@ studentCard.addEventListener("click",()=>{
 
 })*/
 
+/*container.addEventListener('click',()=>{
+    
+    setModal(data);
+})*/
 
+
+
+//functie care returneaza obiectul in functie de adresa de email.
+
+
+
+let btnClose=document.querySelector(".close");
+btnClose.addEventListener("click",()=>{
+   
+    removeModal();
+    
+});
 
 
 
