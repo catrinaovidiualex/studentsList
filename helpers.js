@@ -285,17 +285,28 @@ function  setModal(obj){
     //pentru a trece la urmatoare poza daca se apasa pe sagetile stanga/dreapta
     let btnRight=document.querySelector(".btnRight");
     let btnLeft=document.querySelector(".btnLeft");
+
+
+
     btnRight.addEventListener("click",(e)=>{
-        let obj=e.target
-        let next=obj.nextElementSibling;
-        /*let objR=changeModalCard(obj);
-        moveToRight(objR.email);*/
-        changeModalCard(next);
+         
+        let student=document.querySelector(".modalStudent").querySelector(".modalEmail").textContent;
 
+        console.log(obj.email)
 
+        obj=moveToRight(student);
+      
+        let objModalPics=document.querySelector(".modalPics");
+        let objModalStName=document.querySelector(".modalStName");
+        let objModalStEmail=document.querySelector(".modalEmail");
+        let objModalStRegDate=document.querySelector(".modalRegisterDate");
+
+       
     });
     
     btnLeft.addEventListener("click",(e)=>{
+
+
         let obj=e.target
         let prev=obj.previousElementSibling;
         /*let objR=changeModalCard(obj);
@@ -380,7 +391,7 @@ function changeModalCard(obj){
    
     modalDiv.innerHTML=`
 
-    <i class="far fa-window-close close"></i>
+    
     <img src=${obj.picture.medium} alt="" class="modalPics">
     <div class="butoane">
         <i class="fas fa-arrow-left btnLeft"></i>
@@ -391,6 +402,24 @@ function changeModalCard(obj){
     <p class="modalRegisterDate">Joined:${obj.registered.date}</p>
     
     `
+
+    /*<section class="modal">
+        
+
+        
+
+    </section>
+    <div class="modalStudent">
+        <i class="far fa-window-close close"></i>
+        <img src="https://randomuser.me/api/portraits/med/women/25.jpg" alt="" class="modalPics">
+        <div class="butoane">
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-right"></i>
+        </div> 
+        <h3 class="modalStName">Ethel Dean</h3>
+        <p class="modalEmail">ethel.dean@example.com</p>
+        <p class="modalRegisterDate"> Joined 12-15-2005</p>
+    </div>*/
 
     
 
