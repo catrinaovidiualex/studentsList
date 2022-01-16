@@ -291,29 +291,73 @@ function  setModal(obj){
     btnRight.addEventListener("click",(e)=>{
          
         let student=document.querySelector(".modalStudent").querySelector(".modalEmail").textContent;
-
-        console.log(obj.email)
+        let container=document.querySelector(".container");
+        /*console.log(obj.email)*/
 
         obj=moveToRight(student);
-      
+        
+        btnLeft.style.display="block";
+        // daca obj==null inseamna ca am ajuns la ultiul student si ii sterg sageata dreapta pt ca nu putem merge mai departe la urmatorul!
+        if(obj!=null){
+        
         let objModalPics=document.querySelector(".modalPics");
         let objModalStName=document.querySelector(".modalStName");
         let objModalStEmail=document.querySelector(".modalEmail");
         let objModalStRegDate=document.querySelector(".modalRegisterDate");
 
-       
+        objModalStName.textContent=obj.name.first+" "+obj.name.last;
+        objModalStEmail.textContent=obj.email;
+        objModalPics.src=obj.picture.medium;
+        objModalStRegDate.textContent="Joined "+obj.registered.date;
+
+        
+        }else{
+
+            //stergem sageata dreapta de pe card daca am ajuns la ultimul student
+            btnRight.style.display="none";
+
+        }
     });
     
     btnLeft.addEventListener("click",(e)=>{
+        let student=document.querySelector(".modalStudent").querySelector(".modalEmail").textContent;
+        let container=document.querySelector(".container");
+        /*console.log(obj.email)*/
 
+        obj=moveToLeft(student);
+        btnRight.style.display="block";
+        // daca obj==null inseamna ca am ajuns la primul student si ii sterg sageata stanga pt ca nu putem merge inapoi catre student!
+        if(obj!=null){
+              
+        let objModalPics=document.querySelector(".modalPics");
+        let objModalStName=document.querySelector(".modalStName");
+        let objModalStEmail=document.querySelector(".modalEmail");
+        let objModalStRegDate=document.querySelector(".modalRegisterDate");
+       
+        objModalStName.textContent=obj.name.first+" "+obj.name.last;
+        objModalStEmail.textContent=obj.email;
+        objModalPics.src=obj.picture.medium;
+        objModalStRegDate.textContent="Joined "+obj.registered.date;
 
-        let obj=e.target
-        let prev=obj.previousElementSibling;
-        /*let objR=changeModalCard(obj);
-        moveToRight(objR.email);*/
-        changeModalCard(prev);
+        /*btnLeft.style.display="block";*/
+
+        }else{
+
+            //stergem sageata stanga de pe card daca am ajuns la primul student
+            btnLeft.style.display="none";
+
+        }
+
+        
+
+      
 
     });
+
+
+    
+
+
     
 
 
