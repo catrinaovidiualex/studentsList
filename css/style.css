@@ -164,14 +164,16 @@ body{
     float:right;
 }
 
-/*.btnLeft{
-    padding:5px
+.btnLeft{
+    padding:0px;
+    float:left;
+    margin-top:0px;
 }
 
 .btnRight{
-    padding:5px;
-    float:right;
-}*/
+   padding:0px;
+   float:right;
+}
 .modal{
     position:absolute;
  
