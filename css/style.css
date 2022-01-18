@@ -30,8 +30,8 @@ header p{
     font-weight: bold;
     align-items: left;  
     text-align:center;
-    font-size: 18px;
-    font-family: 'Rubik Beastly', cursive;
+    font-size: 20px;
+    font-family: 'Alfa Slab One', cursive;
 }
 
 
@@ -166,12 +166,12 @@ p.registrationDate{
     padding:8px;
     font-family:  Tahoma, cursive;
     font-size: 15px;
-    color:rgb(64, 103, 180);
+    color:rgb(1, 17, 48);
 
 }
 
 p.pageNumber{
-    background-color: rgb(201, 220, 231);
+    background-color: rgb(255, 255, 255);
     margin:auto;
     font-weight: bold;
     text-align: center;
@@ -182,17 +182,43 @@ p.pageNumber{
     font-family:  Tahoma, cursive;
     font-size: 15px;
     color:rgb(64, 103, 180);
-    border: 1px solid rgb(131, 131, 187);
+    /*border: 1px solid rgb(131, 131, 187);*/
+    border:none;
 }
 
-/*am ajuns aici*/
+/*am ajuns aici si de verificat functia de paginare pt ca nu se mai muta pe alta pagina*/
+.footerPg a {
+    color: black;
+    
+    padding: 10px;
+    text-decoration: none;
+    border:1px solid #1992ff;
+    background-color: white;
+   width:20px;
+   height: 20px;;
+
+  }
+  
+    /*de corectat p.active*/
+  .footerPg a.active {
+    background-color: #1992ff;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .footerPg a:hover:not(.active) {
+    background-color:#2790eb;
+    border-radius: 5px;
+  }
+
+
 footer.footerPg{
     
-    display:flex;
+    display:inline-block;
     background-color: #d5e2f7;
     width: 100%;
     max-height: 150px;
-    margin:0;
+    margin:auto;
 
     /*margin-top:10px;
     max-width:350px;
@@ -201,7 +227,11 @@ footer.footerPg{
 }
 
 footer p{
-    display:inline-block;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    /*display:inline-block;*/
 }
 
 

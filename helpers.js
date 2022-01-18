@@ -128,7 +128,7 @@ function generatePageButtons(numar){
   
      for (let i=0; i<numar;i++){
         
-        let pagesNumbers=document.createElement('p');
+        let pagesNumbers=document.createElement('a');
         footerPage.appendChild(pagesNumbers);
         pagesNumbers.classList.add("pageNumber");
         pagesNumbers.textContent=`${i+1}`;
