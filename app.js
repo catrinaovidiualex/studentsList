@@ -10,14 +10,21 @@ let footer=document.querySelector(".footerPg");
 
 
 
-footer.addEventListener("click",handleClick);
+footer.addEventListener("click",(e)=>{
+
+
+/*let pageNr=document.querySelector(".pageNumber");
+pageNr.style.backgroundColor="#2790eb";*/
+handleClick(e);
+});
+
+
 
 
 window.addEventListener('resize',()=>{
     setCards(data,1);
 
 })
-
 
 
 let searchName=document.querySelector(".filterbyName");
@@ -36,10 +43,6 @@ searchName.addEventListener('input',(e)=>{
 
 
 let  container=document.querySelector(".container");
-
-
-
-
 
 container.addEventListener("click",(e)=>{
 

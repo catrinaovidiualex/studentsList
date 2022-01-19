@@ -11,10 +11,12 @@ body{
     align-items: center;
     justify-items: center;
     flex-direction: column;
-    /*padding: 5px;*/
+    /*padding: 5px;
+    position:relative;*/
    
-    height:100vh;
+    
 }
+
 
 header{
     display:flex;
@@ -170,13 +172,13 @@ p.registrationDate{
 
 }
 
-p.pageNumber{
+.pageNumber{
     background-color: rgb(255, 255, 255);
     margin:auto;
     font-weight: bold;
     text-align: center;
     font-size: 20px;
-    margin-right:5px;
+    margin:auto;
     cursor: pointer;
     padding:8px;
     font-family:  Tahoma, cursive;
@@ -184,65 +186,32 @@ p.pageNumber{
     color:rgb(64, 103, 180);
     /*border: 1px solid rgb(131, 131, 187);*/
     border:none;
+    height:35px;
+    
 }
 
-/*am ajuns aici si de verificat functia de paginare pt ca nu se mai muta pe alta pagina*/
-.footerPg a {
-    color: black;
+
+.footerPg{
     
+    display:flex;
     padding: 10px;
     text-decoration: none;
-    border:1px solid #1992ff;
-    background-color: white;
-   width:20px;
-   height: 20px;;
-
-  }
-  
-    /*de corectat p.active*/
-  .footerPg a.active {
-    background-color: #1992ff;
-    color: white;
-    border-radius: 10px;
-  }
-  
-  .footerPg a:hover:not(.active) {
-    background-color:#2790eb;
-    border-radius: 5px;
-  }
-
-
-footer.footerPg{
-    
-    display:inline-block;
+   
     background-color: #d5e2f7;
-    width: 100%;
-    max-height: 150px;
+    width: 60%;
+    max-height: 200px;
     margin:auto;
+    align-items: center;
+    text-align: center;
 
-    /*margin-top:10px;
-    max-width:350px;
-    max-height: 150px;*/
-
-}
-
-footer p{
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    /*display:inline-block;*/
-}
+  }
+  
 
 
-body{
-    /*opacity: 70%;*/
-    position:relative;
-}
 
 
-.butone{
-    display:flex;
+.butoane{
+    display:inline-block;
 }
 .fa-window-close{
     padding:5px;
@@ -287,8 +256,8 @@ body{
     grid-template-columns: 1fr;
     align-items:center;
     justify-content: center;
-    width:300px;    
-    height:300px;
+    width:270px;    
+    height:280px;
     max-width:700px;  
     margin-right:5px;
     border-radius: 15px;
@@ -330,18 +299,19 @@ body{
 @media (min-width:720px){
 
     body{
+        background-color: #d5e2f7;
         width:100%;
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        /*grid-template-columns: 1fr 1fr;*/
         align-items: center;
         justify-items: center;
         flex-direction: column;
-        padding: 5px;
-        background-color: rgb(238, 236, 236);
-        padding:5px;
+        /*padding: 5px;
+        position:relative;*/
+     
     }
 
-    div.container{
+   div.container{
    
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -356,22 +326,43 @@ body{
     }
     
 
-    .student{
-        border: 1px solid black;
-        display:grid;
-        grid-template-columns: 1fr;
-        align-items:center;
-        justify-content: center;
-        width:230px;    
-        max-width:250px;  
-        margin-right:5px;
        
-        padding:2px;
+
+   
+}
+
+@media (min-width:920px){
+
+    body{
+        background-color: #d5e2f7;
+        width:100%;
+        display: flex;
+        /*grid-template-columns: 1fr 1fr;*/
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+        /*padding: 5px;
+        position:relative;*/
+     
     }
 
+   div.container{
    
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        flex-wrap: wrap;
+        align-items:center;
+        justify-content: center;
+        width:100%;      
+      
+    
+        margin-right:10px;
+        
+    }
+    
 
    
+
 }
 
 

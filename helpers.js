@@ -86,8 +86,8 @@ function setCards(arr,pagina){
         if(window.innerWidth<320){
 
              
-             let a=pagination(arr,pagina,4);
-             attachCards(a);
+             let x=pagination(arr,pagina,4);
+             attachCards(x);
 
              generatePageButtons((arr.length+1)/4);
 
@@ -95,23 +95,24 @@ function setCards(arr,pagina){
 
         }else if(window.innerWidth>=320 && window.innerWidth<720){
 
-            let a=pagination(arr,pagina,6);
+            let x=pagination(arr,pagina,8);
 
-             attachCards(a);
+             attachCards(x);
 
-             generatePageButtons((arr.length+1)/6);
+             generatePageButtons((arr.length+1)/8);
         }
 
         else if(window.innerWidth>=720 && window.innerWidth<920){
 
-            let a=pagination(arr,pagina,9);
-            attachCards(a);
-            generatePageButtons((arr.length+1)/9);
+            let x=pagination(arr,pagina,12);
+            attachCards(x);
+            generatePageButtons((arr.length+1)/12);
         }
         else if(window.innerWidth>=920){
-            let a=pagination(arr,pagina,9);
-            attachCards(a);
-            generatePageButtons((arr.length+1)/9);
+            let x=pagination(arr,pagina,12);
+            /*attachCards(appendChild);*/
+            attachCards(x);
+            generatePageButtons((arr.length+1)/12);
         }
 
 
@@ -122,21 +123,20 @@ function setCards(arr,pagina){
 
 function generatePageButtons(numar){
      
-     let footerPage=document.querySelector(".footerPg");
+    let footerPage=document.querySelector(".footerPg");
 
-     footerPage.textContent="";
-  
-     for (let i=0; i<numar;i++){
-        
-        let pagesNumbers=document.createElement('a');
-        footerPage.appendChild(pagesNumbers);
-        pagesNumbers.classList.add("pageNumber");
-        pagesNumbers.textContent=`${i+1}`;
+    footerPage.textContent="";
+ 
+    for (let i=0; i<numar;i++){
+       
+       let pagesNumbers=document.createElement('p');
+       footerPage.appendChild(pagesNumbers);
+       pagesNumbers.classList.add("pageNumber");
+       pagesNumbers.textContent=`${i+1}`;
 
      }
+    
      
-
-
     }
 
 
