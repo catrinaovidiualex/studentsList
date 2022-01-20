@@ -14,6 +14,8 @@ footer.addEventListener("click",(e)=>{
 
 
 /*let pageNr=document.querySelector(".pageNumber");
+
+for(let i=0;i<pageNr.textContent;i++){
 pageNr.style.backgroundColor="#2790eb";*/
 handleClick(e);
 });
